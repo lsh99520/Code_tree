@@ -4,7 +4,7 @@ K, N = map(int, input().split())
 def dfs(dept):
     global result
     if dept == N:
-        result.append(selected[:])
+        print(*selected[:])
         return
 
     for i in range(1, K+1):
@@ -16,5 +16,3 @@ def dfs(dept):
 result = []
 selected = []
 dfs(0)
-for cur in result:
-     print(' '.join(map(str, cur)))
