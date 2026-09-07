@@ -2,7 +2,6 @@ K, N = map(int, input().split())
 
 # Please write your code here.
 def dfs(dept):
-    global result
     if dept == N:
         print(*selected[:])
         return
@@ -13,6 +12,5 @@ def dfs(dept):
             dfs(dept+1)
             selected.pop()
 
-result = []
 selected = []
 dfs(0)
